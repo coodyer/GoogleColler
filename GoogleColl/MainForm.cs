@@ -168,18 +168,11 @@ namespace GoogleColl
             List<ListViewItem> items = new List<ListViewItem>();
             for (int i = DataListView.Items.Count - 1; i > -1; i--)
             {
-<<<<<<< .mine
                 try
-||||||| .r5
-                if (domains.Add(DataListView.Items[i].SubItems[1].Text))
-=======
-                String url = DataListView.Items[i].SubItems[1].Text;
-                Uri uri = new Uri(url);
-                if (domains.Add(uri.Host))
->>>>>>> .r9
                 {
-                    String uri = new Uri(DataListView.Items[i].SubItems[1].Text).Host;
-                    if (domains.Add(uri))
+                    String url = DataListView.Items[i].SubItems[1].Text;
+                    Uri uri = new Uri(url);
+                    if (domains.Add(uri.Host))
                     {
                         items.Add(DataListView.Items[i]);
                     }
