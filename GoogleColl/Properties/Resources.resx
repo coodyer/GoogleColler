@@ -126,13 +126,13 @@ if(nextPageA!=null){
   <data name="GoogleCollScript" xml:space="preserve">
     <value>CollUrls();
 function CollUrls() {
-  var tags=document.getElementsByTagName('h3');
+  var tags=document.getElementsByClassName('r');
     var results=[];
         for(var i=0;i&lt;tags.length;i++){
             try{
                  var as=tags[i].getElementsByTagName('a');
                  var url=as[0].href;
-                 var title=as[0].innerHTML;
+				 var title=as[0].getElementsByTagName('h3')[0].innerHTML;
                  var result=new Result(url,title);
                  results.push(result);
             }catch(err){}
